@@ -13,7 +13,7 @@ export INSTALLER_SCRIPTS=/vagrant/installers
 export METADATA_FILE=/vagrant/README.md
 
 # Helpers
-bash ${HELPER_SCRIPTS}/apt.sh
+#bash ${HELPER_SCRIPTS}/apt.sh
 bash ${HELPER_SCRIPTS}/prepareMetadata.sh
 
 # Installers
