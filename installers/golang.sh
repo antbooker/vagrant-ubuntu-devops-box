@@ -28,4 +28,4 @@ function InstallGo () {
 
 # Install Go versions
 InstallGo 1.12 1.12.14 false
-InstallGo 1.13 1.13.5 ture
+InstallGo 1.13 1.13.5 true
