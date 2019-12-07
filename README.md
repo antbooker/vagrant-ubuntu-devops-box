@@ -1,8 +1,11 @@
-# Vagrant Ubuntu Bionic 18.04 DevOps Box
-The following software will be installed on your workstation as of 05/12/2019 22:47:34
+# Vagrant Ubuntu Bionic 18.04 DevOps Box for VirtualBox
+## Usage
+
+Install [VirtuaBox](https://www.virtualbox.org/) & [Vagrant](https://www.vagrantup.com/).
+
 ***
-- 7-Zip 16.02
-- Ansible (ansible 2.9.2)
+The following software will be installed as of 07/12/2019 12:32:28
+***
 - Basic CLI:
   - curl
   - dbus
@@ -40,11 +43,19 @@ The following software will be installed on your workstation as of 05/12/2019 22
   - xz-utils
   - zip
   - zsync
+- 7-Zip 16.02
+- Ansible (ansible 2.9.2)
+- AWS CLI (aws-cli/1.16.298 Python/2.7.15+ Linux/4.15.0-72-generic botocore/1.13.34)
+- Azure CLI (azure-cli 2.0.77)
+- Azure CLI (azure-devops 0.16.0)
 - build-essential
 - Docker (Docker version 19.03.5, build 633a0ea838)
 - Docker Compose (docker-compose version 1.25.0, build 0a186604)
 - Git (2.24.0)
 - Git Large File Storage (LFS) (2.9.1)
+- Go 1.12 (go version go1.12.14 linux/amd64)
+- Go 1.13 (go version go1.13.5 linux/amd64)
+- Google Cloud SDK (272.0.0)
 - OpenJDK (8) (openjdk version "1.8.0_222")
 - OpenJDK (11) (openjdk version "11.0.4" 2019-07-16)
 - Ant (Apache Ant(TM) version 1.10.5 compiled on March 28 2019)
