@@ -1,9 +1,8 @@
 #!/bin/bash
+set -e
 
 # Source the helpers for use with the script
 source $HELPER_SCRIPTS/document.sh
-
-set -e
 
 # Install Terraform
 TERRAFORM_VERSION=$(curl -s https://checkpoint-api.hashicorp.com/v1/check/terraform | jq -r .current_version)

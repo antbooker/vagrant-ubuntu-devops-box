@@ -1,9 +1,8 @@
 #!/bin/bash
+set -e
 
 # Source the helpers for use with the script
 source $HELPER_SCRIPTS/document.sh
-
-set -e
 
 # Install the AWS CLI
 curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"

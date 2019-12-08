@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 function WriteItem {
     if [ -z "$METADATA_FILE" ]; then

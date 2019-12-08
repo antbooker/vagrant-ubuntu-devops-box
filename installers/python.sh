@@ -1,12 +1,17 @@
 #!/bin/bash
+set -e
 
 # Source the helpers for use with the script
 source $HELPER_SCRIPTS/document.sh
 
-set -e
-
 ## Install Python, Python 3, pip, pip3
-apt-get install --no-install-recommends python python-dev python-pip python3 python3-dev python3-pip -y
+apt-get install -y --no-install-recommends \
+  python \
+  python-dev \
+  python-pip \
+  python3 \
+  python3-dev \
+  python3-pip
 
 # Run tests to determine that the software installed as expected
 echo "Testing python2 pip2 python3 pip3"

@@ -5,113 +5,53 @@ source $HELPER_SCRIPTS/document.sh
 
 set -e
 
-echo "Install curl"
-apt-get install -y --no-install-recommends curl
+# Install Universe
+add-apt-repository -y \
+  universe
 
-echo "Install dnsutils"
-apt-get install -y --no-install-recommends dnsutils
-
-echo "Install file"
-apt-get install -y --no-install-recommends file
-
-echo "Install ftp"
-apt-get install -y --no-install-recommends ftp
-
-echo "Install iproute2"
-apt-get install -y --no-install-recommends iproute2
-
-echo "Install iputils-ping"
-apt-get install -y --no-install-recommends iputils-ping
-
-echo "Install jq"
-apt-get install -y --no-install-recommends jq
-
-echo "Install libcurl3"
-apt-get install -y --no-install-recommends libcurl3
-
-echo "Install libunwind8"
-apt-get install -y --no-install-recommends libunwind8
-
-echo "Install locales"
-apt-get install -y --no-install-recommends locales
-
-echo "Install netcat"
-apt-get install -y --no-install-recommends netcat
-
-echo "Install openssh-client"
-apt-get install -y --no-install-recommends openssh-client
-
-echo "Install rsync"
-apt-get install -y --no-install-recommends rsync
-
-echo "Install shellcheck"
-apt-get install -y --no-install-recommends shellcheck
-
-echo "Install sudo"
-apt-get install -y --no-install-recommends sudo
-
-echo "Install telnet"
-apt-get install -y --no-install-recommends telnet
-
-echo "Install time"
-apt-get install -y --no-install-recommends time
-
-echo "Install unzip"
-apt-get install -y --no-install-recommends unzip
-
-echo "Install wget"
-apt-get install -y --no-install-recommends wget
-
-echo "Install zip"
-apt-get install -y --no-install-recommends zip
-
-echo "Install tzdata"
-apt-get install -y --no-install-recommends tzdata
-
-echo "Install libxkbfile"
-apt-get install -y --no-install-recommends libxkbfile-dev
-
-echo "Install pkg-config"
-apt-get install -y --no-install-recommends pkg-config
-
-echo "Install libsecret-1-dev"
-apt-get install -y --no-install-recommends libsecret-1-dev
-
-echo "Install libxss1"
-apt-get install -y --no-install-recommends libxss1
-
-echo "Install libgconf-2-4"
-apt-get install -y --no-install-recommends libgconf-2-4
-
-echo "Install dbus"
-apt-get install -y --no-install-recommends dbus
-
-echo "Install xvfb"
-apt-get install -y --no-install-recommends xvfb
-
-echo "Install libgtk"
-apt-get install -y --no-install-recommends libgtk-3-0
-
-echo "Install fakeroot"
-apt-get install -y --no-install-recommends fakeroot
-
-echo "Install dpkg"
-apt-get install -y --no-install-recommends dpkg
-
-echo "Install rpm"
-apt-get install -y --no-install-recommends rpm
-
-echo "Install xz-utils"
-apt-get install -y --no-install-recommends xz-utils
-
-echo "Install xorriso"
-apt-get install -y --no-install-recommends xorriso
-
-echo "Install zsync"
-apt-get install -y --no-install-recommends zsync
-
-echo "Install curl"
-apt-get install -y --no-install-recommends curl
+# Install Basic CLI Packages
+apt-get update
+apt-get install -y --no-install-recommends \
+  apt-transport-https \
+  ca-certificates \
+  curl \
+  dbus \
+  dnsutils \
+  dpkg \
+  fakeroot \
+  file \
+  ftp \
+  gnupg \
+  iproute2 \
+  iputils-ping \
+  jq \
+  libcurl4 \
+  libgconf-2-4 \
+  libgtk-3-0 \
+  libsecret-1-dev \
+  libunwind8 \
+  libxkbfile-dev \
+  libxss1 \
+  lsb-release \
+  locales \
+  netcat \
+  openssh-client \
+  pkg-config \
+  rpm \
+  rsync\
+  shellcheck \
+  software-properties-common \
+  sudo \
+  telnet \
+  time \
+  tzdata \
+  unzip \
+  wget \
+  xorriso \
+  xvfb \
+  xz-utils \
+  zip \
+  zsync
 
 # Run tests to determine that the software installed as expected
 echo "Testing to make sure that script performed as expected, and basic scenarios work"
@@ -124,6 +64,8 @@ done
 
 # Document to README.md
 DocumentInstalledItem "Basic CLI:"
+DocumentInstalledItemIndent "apt-transport-https"
+DocumentInstalledItemIndent "ca-certificates"
 DocumentInstalledItemIndent "curl"
 DocumentInstalledItemIndent "dbus"
 DocumentInstalledItemIndent "dnsutils"
@@ -131,17 +73,18 @@ DocumentInstalledItemIndent "dpkg"
 DocumentInstalledItemIndent "fakeroot"
 DocumentInstalledItemIndent "file"
 DocumentInstalledItemIndent "ftp"
+DocumentInstalledItemIndent "gnupg"
 DocumentInstalledItemIndent "iproute2"
 DocumentInstalledItemIndent "iputils-ping"
 DocumentInstalledItemIndent "jq"
-DocumentInstalledItemIndent "libcurl3"
+DocumentInstalledItemIndent "libcurl4"
 DocumentInstalledItemIndent "libgconf-2-4"
 DocumentInstalledItemIndent "libgtk-3-0"
-DocumentInstalledItemIndent "libicu55"
 DocumentInstalledItemIndent "libsecret-1-dev"
 DocumentInstalledItemIndent "libunwind8"
 DocumentInstalledItemIndent "libxkbfile-dev"
 DocumentInstalledItemIndent "libxss1"
+DocumentInstalledItemIndent "lsb-release"
 DocumentInstalledItemIndent "locales"
 DocumentInstalledItemIndent "netcat"
 DocumentInstalledItemIndent "openssh-client"
@@ -149,6 +92,7 @@ DocumentInstalledItemIndent "pkg-config"
 DocumentInstalledItemIndent "rpm"
 DocumentInstalledItemIndent "rsync"
 DocumentInstalledItemIndent "shellcheck"
+DocumentInstalledItemIndent "software-properties-common"
 DocumentInstalledItemIndent "sudo"
 DocumentInstalledItemIndent "telnet"
 DocumentInstalledItemIndent "time"

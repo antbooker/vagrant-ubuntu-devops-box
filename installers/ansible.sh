@@ -1,14 +1,15 @@
 #!/bin/bash
+set -e
 
 # Source the helpers for use with the script
 source $HELPER_SCRIPTS/document.sh
 
-set -e
-
 # Install Ansible PPA and latest Ansible
-add-apt-repository ppa:ansible/ansible -y
-apt-get update -y
-apt-get install --no-install-recommends ansible -y
+add-apt-repository -y \
+  ppa:ansible/ansible
+apt-get update
+apt-get install -y --no-install-recommends \
+  ansible
 
 # Run tests to determine that the software installed as expected
 echo "Testing ansible installation"

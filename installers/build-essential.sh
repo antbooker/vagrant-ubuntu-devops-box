@@ -1,13 +1,13 @@
 #!/bin/bash
+set -e
 
 # Source the helpers for use with the script
 source $HELPER_SCRIPTS/document.sh
 
-set -e
-
 # Install build-essential
-apt-get update -y
-apt-get install --no-install-recommends build-essential -y
+apt-get update
+apt-get install -y --no-install-recommends \
+  build-essential
 
 # Document to README.md
 DocumentInstalledItem build-essential

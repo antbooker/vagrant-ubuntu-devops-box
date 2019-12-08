@@ -1,17 +1,17 @@
 #!/bin/bash
+set -e
 
 # Source the helpers for use with the script
 source $HELPER_SCRIPTS/document.sh
-
-set -e
 
 DEFAULT_JDK_VERSION=8
 DEFAULT_MVN_VERSION=3.6.2
 
 # Install OpenJDK's
-apt-get update -y
-apt-get install --no-install-recommends openjdk-8-jdk -y
-apt-get install --no-install-recommends openjdk-11-jdk -y
+apt-get update
+apt-get install -y --no-install-recommends \
+  openjdk-8-jdk \
+  openjdk-11-jdk
 update-alternatives --set java /usr/lib/jvm/java-${DEFAULT_JDK_VERSION}-openjdk-amd64/jre/bin/java
 echo "JAVA_HOME_8_X64=/usr/lib/jvm/java-8-openjdk-amd64" | tee -a /etc/environment
 echo "JAVA_HOME_11_X64=/usr/lib/jvm/java-11-openjdk-amd64" | tee -a /etc/environment
@@ -19,7 +19,9 @@ echo "JAVA_HOME=/usr/lib/jvm/java-${DEFAULT_JDK_VERSION}-openjdk-amd64" | tee -a
 echo "JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8" | tee -a /etc/environment
 
 # Install Ant
-apt-get install --no-install-recommends ant ant-optional -y
+apt-get install --no-install-recommends -y \
+  ant \
+  ant-optional
 echo "ANT_HOME=/usr/share/ant" | tee -a /etc/environment
 
 # Install Maven

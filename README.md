@@ -4,9 +4,11 @@
 Install [VirtuaBox](https://www.virtualbox.org/) & [Vagrant](https://www.vagrantup.com/).
 
 ***
-The following software will be installed as of 07/12/2019 12:32:28
+The following software will be installed as of 08/12/2019 11:35:41
 ***
 - Basic CLI:
+  - apt-transport-https
+  - ca-certificates
   - curl
   - dbus
   - dnsutils
@@ -14,17 +16,18 @@ The following software will be installed as of 07/12/2019 12:32:28
   - fakeroot
   - file
   - ftp
+  - gnupg
   - iproute2
   - iputils-ping
   - jq
-  - libcurl3
+  - libcurl4
   - libgconf-2-4
   - libgtk-3-0
-  - libicu55
   - libsecret-1-dev
   - libunwind8
   - libxkbfile-dev
   - libxss1
+  - lsb-release
   - locales
   - netcat
   - openssh-client
@@ -32,6 +35,7 @@ The following software will be installed as of 07/12/2019 12:32:28
   - rpm
   - rsync
   - shellcheck
+  - software-properties-common
   - sudo
   - telnet
   - time
@@ -43,12 +47,17 @@ The following software will be installed as of 07/12/2019 12:32:28
   - xz-utils
   - zip
   - zsync
+- build-essential
 - 7-Zip 16.02
 - Ansible (ansible 2.9.2)
+- Python (Python 2.7.15+)
+- pip (pip 9.0.1 from /usr/lib/python2.7/dist-packages (python 2.7))
+- Python3 (Python 3.6.9)
+- pip3 (pip 9.0.1 from /usr/lib/python3/dist-packages (python 3.6))
 - AWS CLI (aws-cli/1.16.298 Python/2.7.15+ Linux/4.15.0-72-generic botocore/1.13.34)
 - Azure CLI (azure-cli 2.0.77)
-- Azure CLI (azure-devops 0.16.0)
-- build-essential
+- Azure CLI Extentions:
+  - azure-devops (azure-devops 0.16.0)
 - Docker (Docker version 19.03.5, build 633a0ea838)
 - Docker Compose (docker-compose version 1.25.0, build 0a186604)
 - Git (2.24.0)
@@ -68,9 +77,5 @@ The following software will be installed as of 07/12/2019 12:32:28
   - npm (6.12.1)
 - Yarn (1.19.2)
 - Packer (1.4.5)
-- Python (Python 2.7.15+)
-- pip (pip 9.0.1 from /usr/lib/python2.7/dist-packages (python 2.7))
-- Python3 (Python 3.6.9)
-- pip3 (pip 9.0.1 from /usr/lib/python3/dist-packages (python 3.6))
 - Subversion (svn, version 1.9.7 (r1800392))
 - Terraform (Terraform v0.12.17)

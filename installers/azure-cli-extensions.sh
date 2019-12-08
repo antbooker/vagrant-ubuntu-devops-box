@@ -1,9 +1,8 @@
 #!/bin/bash
+set -e
 
 # Source the helpers for use with the script
 source $HELPER_SCRIPTS/document.sh
-
-set -e
 
 # install azure devops Cli extension
 az extension add -n azure-devops
@@ -18,4 +17,5 @@ else
 fi
 
 # Document to README
-DocumentInstalledItem "Azure CLI ($(az -v | grep azure-devops))"
+DocumentInstalledItem "Azure CLI Extentions:"
+DocumentInstalledItemIndent "azure-devops ($(az -v | grep azure-devops))"

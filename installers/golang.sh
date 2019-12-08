@@ -1,9 +1,8 @@
 #!/bin/bash
+set -e
 
 # Source the helpers for use with the script
 source $HELPER_SCRIPTS/document.sh
-
-set -e
 
 # This function installs Go using the specified arguments:
 #   $1=MajorVersion (1.11)

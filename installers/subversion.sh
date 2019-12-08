@@ -1,12 +1,12 @@
 #!/bin/bash
+set -e
 
 # Source the helpers for use with the script
 source $HELPER_SCRIPTS/document.sh
 
-set -e
-
 # Install Subversion
-apt-get install --no-install-recommends subversion -y
+apt-get install -y --no-install-recommends \
+  subversion
 
 # Run tests to determine that the software installed as expected
 echo "Testing subversion installation"

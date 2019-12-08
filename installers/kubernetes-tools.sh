@@ -1,17 +1,16 @@
 #!/bin/bash
+set -e
 
 # Source the helpers for use with the script
 source $HELPER_SCRIPTS/document.sh
 
-set -e
-
 ## Install kubectl
-apt-get install apt-transport-https -y
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
 touch /etc/apt/sources.list.d/kubernetes.list
 echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" | tee -a /etc/apt/sources.list.d/kubernetes.list
-apt-get update -y
-apt-get install kubectl -y
+apt-get update
+apt-get install -y --no-install-recommends \
+  kubectl
 
 ## Install Helm
 curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
