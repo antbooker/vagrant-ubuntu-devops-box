@@ -4,7 +4,7 @@
 Install [VirtuaBox](https://www.virtualbox.org/) & [Vagrant](https://www.vagrantup.com/).
 
 ***
-The following software will be installed as of 08/12/2019 11:35:41
+The following software will be installed as of 20/05/2020 20:34:28
 ***
 - Basic CLI:
   - apt-transport-https
@@ -48,34 +48,38 @@ The following software will be installed as of 08/12/2019 11:35:41
   - zip
   - zsync
 - build-essential
-- 7-Zip 16.02
-- Ansible (ansible 2.9.2)
-- Python (Python 2.7.15+)
+- OpenJDK (8) (openjdk version "1.8.0_252")
+- OpenJDK (11) (openjdk version "11.0.7" 2020-04-14)
+- OpenJDK (12) (openjdk version "12.0.2" 2019-07-16)
+- OpenJDK (13) (openjdk version "13.0.3" 2020-04-14)
+- OpenJDK (14) (openjdk version "14.0.1" 2020-04-14)
+- Python (Python 2.7.17)
 - pip (pip 9.0.1 from /usr/lib/python2.7/dist-packages (python 2.7))
 - Python3 (Python 3.6.9)
 - pip3 (pip 9.0.1 from /usr/lib/python3/dist-packages (python 3.6))
-- AWS CLI (aws-cli/1.16.298 Python/2.7.15+ Linux/4.15.0-72-generic botocore/1.13.34)
-- Azure CLI (azure-cli 2.0.77)
-- Azure CLI Extentions:
-  - azure-devops (azure-devops 0.16.0)
-- Docker (Docker version 19.03.5, build 633a0ea838)
-- Docker Compose (docker-compose version 1.25.0, build 0a186604)
-- Git (2.24.0)
-- Git Large File Storage (LFS) (2.9.1)
-- Go 1.12 (go version go1.12.14 linux/amd64)
-- Go 1.13 (go version go1.13.5 linux/amd64)
-- Google Cloud SDK (272.0.0)
-- OpenJDK (8) (openjdk version "1.8.0_222")
-- OpenJDK (11) (openjdk version "11.0.4" 2019-07-16)
+- 7-Zip 16.02
+- Ansible (ansible 2.9.9)
 - Ant (Apache Ant(TM) version 1.10.5 compiled on March 28 2019)
-- Gradle 6.0.1
-- Maven (Apache Maven 3.6.2 (40f52333136460af0dc0d7232c0dc0bcf0d9e117; 2019-08-27T15:06:16Z))
-- kubectl (Client Version: v1.16.3)
-- helm (v3.0.1+g7c22ef9)
-- MySQL (mysql  Ver 14.14 Distrib 5.7.28, for Linux (x86_64) using  EditLine wrapper)
-- Node.js (v12.13.1)
-  - npm (6.12.1)
-- Yarn (1.19.2)
-- Packer (1.4.5)
+- AWS CLI (aws-cli/2.0.15 Python/3.7.3 Linux/4.15.0-101-generic botocore/2.0.0dev19)
+- AzCopy7 (available by azcopy alias) 7.3.0
+- AzCopy10 (available by azcopy10 alias) 10.4.3
+- Azure CLI (azure-cli 2.6.0)
+- Azure CLI Extentions:
+  - azure-devops (azure-devops 0.18.0)
+- Docker (Docker version 19.03.9, build 9d988398e7)
+- Docker Compose (docker-compose version 1.25.5, build 8a1c60f6)
+- Git (2.26.2)
+- Git Large File Storage (LFS) (2.11.0)
+- Go 1.13 (go version go1.13.11 linux/amd64)
+- Go 1.14 (go version go1.14.3 linux/amd64)
+- Google Cloud SDK (293.0.0)
+- Gradle 6.4.1
+- HTTPie (0.9.8)
+- kubectl (Client Version: v1.18.3)
+- helm (v3.2.1+gfe51cd1)
+- Maven (Apache Maven 3.6.3 (cecedd343002696d0abb50b32b541b8a6ba2883f))
+- MySQL Client (mysql  Ver 14.14 Distrib 5.7.30, for Linux (x86_64) using  EditLine wrapper)
+- Packer (1.5.6)
+- psql (PostgreSQL) 10.12
 - Subversion (svn, version 1.9.7 (r1800392))
-- Terraform (Terraform v0.12.17)
+- Terraform (Terraform v0.12.25)

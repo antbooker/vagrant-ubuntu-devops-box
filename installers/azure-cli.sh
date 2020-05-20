@@ -1,18 +1,17 @@
 #!/bin/bash
 set -e
 
-# Source the helpers for use with the script
+# Source helpers
 source $HELPER_SCRIPTS/document.sh
 
-# Install Azure CLI
+# Install
 curl -sL https://aka.ms/InstallAzureCLIDeb | bash
 
-# Run tests to determine that the software installed as expected
-echo "Testing az installation"
+# Test
 if ! command -v az; then
-    echo "azure-cli was not installed"
-    exit 1
+  echo "azure-cli was found"
+  exit 1
 fi
 
-# Document to README
+# Document
 DocumentInstalledItem "Azure CLI ($(az -v | head -n 1))"

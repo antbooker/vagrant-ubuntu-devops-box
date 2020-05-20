@@ -1,21 +1,20 @@
 #!/bin/bash
 set -e
 
-# Source the helpers for use with the script
+# Source helpers
 source $HELPER_SCRIPTS/document.sh
 
-# Install Terraform
+# Install
 TERRAFORM_VERSION=$(curl -s https://checkpoint-api.hashicorp.com/v1/check/terraform | jq -r .current_version)
 curl -LO "https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip"
 unzip -o "terraform_${TERRAFORM_VERSION}_linux_amd64.zip" -d /usr/local/bin
 rm -f "terraform_${TERRAFORM_VERSION}_linux_amd64.zip"
 
-# Run tests to determine that the software installed as expected
-echo "Testing terraform installation"
+# Tests
 if ! command -v terraform; then
-    echo "Terraform was not installed or found on PATH"
-    exit 1
+  echo "Terraform was not found"
+  exit 1
 fi
 
-# Document to README
+# Document
 DocumentInstalledItem "Terraform ($(terraform --version))"

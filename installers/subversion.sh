@@ -1,19 +1,19 @@
 #!/bin/bash
 set -e
 
-# Source the helpers for use with the script
+# Source helpers
 source $HELPER_SCRIPTS/document.sh
 
-# Install Subversion
+# Install
+apt-get update
 apt-get install -y --no-install-recommends \
   subversion
 
-# Run tests to determine that the software installed as expected
-echo "Testing subversion installation"
+# Test
 if ! command -v svn; then
-    echo "Subversion (svn) was not installed"
-    exit 1
+  echo "Subversion was not found"
+  exit 1
 fi
 
-# Document to README.md
+# Document
 DocumentInstalledItem "Subversion ($(svn --version | head -n 1))"

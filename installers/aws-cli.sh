@@ -1,22 +1,21 @@
 #!/bin/bash
 set -e
 
-# Source the helpers for use with the script
+# Source helpers
 source $HELPER_SCRIPTS/document.sh
 
-# Install the AWS CLI
-curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
-unzip awscli-bundle.zip
-./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
-rm awscli-bundle.zip
-rm -rf awscli-bundle
+# Install
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
+unzip awscliv2.zip && \
+./aws/install && \
+rm awscliv2.zip && \
+rm -rf aws
 
-# Run tests to determine that the software installed as expected
-echo "Testing aws installation"
+# Test
 if ! command -v aws; then
-    echo "aws was not installed or found on PATH"
-    exit 1
+  echo "aws was not found"
+  exit 1
 fi
 
-# Document to README.md
+# Document
 DocumentInstalledItem "AWS CLI ($(aws --version 2>&1))"

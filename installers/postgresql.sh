@@ -7,9 +7,10 @@ source $HELPER_SCRIPTS/document.sh
 # Install
 apt-get update
 apt-get install -y --no-install-recommends \
-  build-essential
+  libpq-dev \
+  postgresql-client
 
 # Test
 
-# Document
-DocumentInstalledItem build-essential
+# Document to README.md
+DocumentInstalledItem "$(psql -V 2>&1 | cut -d ' ' -f 1,2,3)"

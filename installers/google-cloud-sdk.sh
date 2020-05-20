@@ -1,23 +1,21 @@
 #!/bin/bash
 set -e
 
-# Source the helpers for use with the script
+# Source helpers
 source $HELPER_SCRIPTS/document.sh
 
-# Install the Google Cloud SDK
+# Install
 echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
 curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
 sudo apt-get update
 sudo apt-get install -y --no-install-recommends \
   google-cloud-sdk
 
-# Validate the installation
-echo "Validate the installation"
+# Test
 if ! command -v gcloud; then
-    echo "gcloud was not installed"
-    exit 1
+  echo "google cloud sdk was not found"
+  exit 1
 fi
 
-# Document the installed version
-echo "Document the installed version"
+# Document
 DocumentInstalledItem "Google Cloud SDK ($(gcloud --version | head -n 1 | cut -d ' ' -f 4))"

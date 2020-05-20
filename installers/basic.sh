@@ -1,15 +1,12 @@
 #!/bin/bash
-
-# Source the helpers for use with the script
-source $HELPER_SCRIPTS/document.sh
-
 set -e
 
-# Install Universe
+# Source helpers
+source $HELPER_SCRIPTS/document.sh
+
+# Install
 add-apt-repository -y \
   universe
-
-# Install Basic CLI Packages
 apt-get update
 apt-get install -y --no-install-recommends \
   apt-transport-https \
@@ -53,16 +50,15 @@ apt-get install -y --no-install-recommends \
   zip \
   zsync
 
-# Run tests to determine that the software installed as expected
-echo "Testing to make sure that script performed as expected, and basic scenarios work"
+# Test
 for cmd in curl file ftp jq netcat ssh rsync shellcheck sudo telnet time unzip wget zip; do
-    if ! command -v $cmd; then
-        echo "$cmd was not installed"
-        exit 1
-    fi
+  if ! command -v $cmd; then
+    echo "$cmd was not found"
+    exit 1
+  fi
 done
 
-# Document to README.md
+# Document
 DocumentInstalledItem "Basic CLI:"
 DocumentInstalledItemIndent "apt-transport-https"
 DocumentInstalledItemIndent "ca-certificates"
