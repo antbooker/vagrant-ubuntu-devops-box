@@ -14,6 +14,7 @@ apt-get install -y --no-install-recommends \
   curl \
   dbus \
   dnsutils \
+  dos2unix \
   dpkg \
   fakeroot \
   file \

@@ -4,7 +4,7 @@
 Install [VirtuaBox](https://www.virtualbox.org/) & [Vagrant](https://www.vagrantup.com/).
 
 ***
-The following software will be installed as of 21/08/2020 22:47:49
+The following software will be installed as of 24/08/2020 20:11:20
 ***
 - Basic CLI:
   - apt-transport-https

@@ -43,3 +43,7 @@ bash ${INSTALLER_SCRIPTS}/terraform.sh
 
 # Cleanup
 bash ${INSTALLER_SCRIPTS}/cleanup.sh
+
+# Post boot run
+sudo hostnamectl set-hostname secdevops0master.advisorydevsecops.deloitte.com
+sudo apt-get install dos2unix
