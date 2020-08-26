@@ -4,7 +4,7 @@
 Install [VirtuaBox](https://www.virtualbox.org/) & [Vagrant](https://www.vagrantup.com/).
 
 ***
-The following software will be installed as of 26/08/2020 01:18:07
+The following software will be installed as of 26/08/2020 21:02:30
 ***
 - Basic CLI:
   - apt-transport-https
@@ -63,7 +63,7 @@ The following software will be installed as of 26/08/2020 01:18:07
 - AWS CLI (aws-cli/2.0.43 Python/3.7.3 Linux/4.15.0-112-generic exe/x86_64.ubuntu.18)
 - AzCopy7 (available by azcopy alias) 7.3.0
 - AzCopy10 (available by azcopy10 alias) 10.6.0
-- Azure CLI (azure-cli                         2.10.1 *)
+- Azure CLI (azure-cli                         2.11.0)
 - Azure CLI Extentions:
   - azure-devops (azure-devops                      0.18.0)
 - Docker (Docker version 19.03.12, build 48a66213fe)
@@ -75,11 +75,11 @@ The following software will be installed as of 26/08/2020 01:18:07
 - Google Cloud SDK (307.0.0)
 - Gradle 6.6.1
 - HTTPie (0.9.8)
-- kubectl (Client Version: v1.18.8)
+- kubectl (Client Version: v1.19.0)
 - helm (v3.3.0+g8a4aeec)
 - Maven (Apache Maven 3.6.3 (cecedd343002696d0abb50b32b541b8a6ba2883f))
 - MySQL Client (mysql  Ver 14.14 Distrib 5.7.31, for Linux (x86_64) using  EditLine wrapper)
 - Packer (1.6.1)
 - psql (PostgreSQL) 10.14
 - Subversion (svn, version 1.9.7 (r1800392))
-- Terraform (Terraform v0.13.0)
+- Terraform (Terraform v0.13.1)
