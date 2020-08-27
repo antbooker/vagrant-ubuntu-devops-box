@@ -3,7 +3,7 @@ set -e
 
 ### Tony boot run ###
 sudo hostnamectl set-hostname secdevops0master.advisorydevsecops.deloitte.com
-sudo apt-get install dos2unix
+#sudo apt-get install dos2unix
 ### Tony boot run ###
 
 export HELPER_SCRIPTS=/vagrant/helpers
