@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
     vb.memory = 4096
     vb.cpus = 4
     vb.customize ['modifyvm', :id, '--clipboard', 'bidirectional']
-    vb.name = "vagrant-ubuntu-devops-box"
+    vb.name = "vagrant.devops.box"
   end
 
   config.vm.provision "shell", path: "bootstrap.sh"
