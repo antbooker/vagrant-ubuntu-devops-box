@@ -2,7 +2,7 @@
 set -e
 
 ### Tony boot run ###
-sudo hostnamectl set-hostname vagrant.devops.box
+sudo hostnamectl set-hostname devops-box-full
 #sudo apt-get install dos2unix
 ### Tony boot run ###
 
