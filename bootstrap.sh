@@ -2,7 +2,7 @@
 set -e
 
 ### Tony boot run ###
-sudo hostnamectl set-hostname secdevops0master.advisorydevsecops.deloitte.com
+sudo hostnamectl set-hostname vagrant.devops.box
 #sudo apt-get install dos2unix
 ### Tony boot run ###
 
