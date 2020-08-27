@@ -4,7 +4,7 @@
 Install [VirtuaBox](https://www.virtualbox.org/) & [Vagrant](https://www.vagrantup.com/).
 
 ***
-The following software will be installed as of 27/08/2020 18:03:11
+The following software will be installed as of 27/08/2020 18:29:42
 ***
 - Basic CLI:
   - apt-transport-https
@@ -48,3 +48,8 @@ The following software will be installed as of 27/08/2020 18:03:11
   - zip
   - zsync
 - build-essential
+- OpenJDK (8) (openjdk version "1.8.0_265")
+- OpenJDK (11) (openjdk version "11.0.8" 2020-07-14)
+- OpenJDK (12) (openjdk version "12.0.2" 2019-07-16)
+- OpenJDK (13) (openjdk version "13.0.4" 2020-07-14)
+- OpenJDK (14) (openjdk version "14.0.2" 2020-07-14)
