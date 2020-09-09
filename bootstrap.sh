@@ -3,28 +3,29 @@
 #set -x
 
 set -e
+  ### Tony boot run ###
+       echo "---- set locale"
+          sudo locale-gen en_US.utf8 || true
+          sudo update-locale LANG=en_US.UTF-8
+          sudo /bin/bash -c 'echo "export LANG=en_US.UTF-8" >> /etc/skel/.bashrc'
 
-### Tony boot run ###
-             sudo hostnamectl set-hostname devops-box-full
-        #Upgrade from the shell with the following commands. This makes sure your Ubuntu is up to date.
-             sudo apt update
-             sudo apt upgrade -y
+        echo "---- Update and Upgrade"
+          sudo DEBIAN_FRONTEND=noninteractive apt-get -y update
+          sudo DEBIAN_FRONTEND=noninteractive apt-get -y upgrade
+          sudo DEBIAN_FRONTEND=noninteractive apt-get -y install apt-transport-https
+          sudo DEBIAN_FRONTEND=noninteractive apt-get -y install curl p7zip-full jq docker.io git awscli
+          sudo usermod --append --groups docker ubuntu
 
+    # Add the Cloud SDK distribution URI as a package source
+        echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+    # Import the Google Cloud public key
+        curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
+    # Update the package list and install the Cloud SDK
+        sudo apt-get update && sudo apt-get -y install google-cloud-sdk
 
-        #Next, follow this up with this which handles changing software dependencies with new versions of packages.
-             sudo apt dist-upgrade
-
-
-        #Then follow this up with this which removes dependencies from uninstalled applications.
-             sudo apt-get autoremove -y
-
-        #After that, it's time to get things ready for the big upgrade with:
-             sudo apt install update-manager-core
-             sudo do-release-upgrade -q -m server
-             sudo apt-get install dos2unix
-             sudo apt-get -y install jq
-             sudo apt-get -y install unzip
-### Tony boot run ###
+    # Update the package list and install the Cloud SDK
+        curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+   ### Tony boot run ###
 
 export HELPER_SCRIPTS=/vagrant/helpers
 export INSTALLER_SCRIPTS=/vagrant/installers
