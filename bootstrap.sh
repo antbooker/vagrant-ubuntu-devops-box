@@ -10,6 +10,8 @@ set -e
           sudo /bin/bash -c 'echo "export LANG=en_US.UTF-8" >> /etc/skel/.bashrc'
 
         echo "---- Update and Upgrade"
+          sudo apt-get install unattended-upgrades
+          sudo unattended-upgrade -d -v
           sudo DEBIAN_FRONTEND=noninteractive apt-get -y update
           sudo DEBIAN_FRONTEND=noninteractive apt-get -y upgrade
           sudo DEBIAN_FRONTEND=noninteractive apt-get -y install apt-transport-https
