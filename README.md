@@ -4,7 +4,7 @@
 Install [VirtuaBox](https://www.virtualbox.org/) & [Vagrant](https://www.vagrantup.com/).
 
 ***
-The following software will be installed as of 09/09/2020 02:43:38
+The following software will be installed as of 10/09/2020 05:35:36
 ***
 - Basic CLI:
   - apt-transport-https
@@ -72,10 +72,10 @@ The following software will be installed as of 09/09/2020 02:43:38
 - Git Large File Storage (LFS) (2.12.0)
 - Go 1.13 (go version go1.13.11 linux/amd64)
 - Go 1.14 (go version go1.14.3 linux/amd64)
-- Google Cloud SDK (308.0.0)
+- Google Cloud SDK (309.0.0)
 - Gradle 6.6.1
 - HTTPie (0.9.8)
-- kubectl (Client Version: v1.19.0)
+- kubectl (Client Version: v1.19.1)
 - helm (v3.3.1+g249e521)
 - Maven (Apache Maven 3.6.3 (cecedd343002696d0abb50b32b541b8a6ba2883f))
 - MySQL Client (mysql  Ver 14.14 Distrib 5.7.31, for Linux (x86_64) using  EditLine wrapper)
