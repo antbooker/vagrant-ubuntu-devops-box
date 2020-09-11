@@ -3,6 +3,10 @@
 
 Install [VirtuaBox](https://www.virtualbox.org/) & [Vagrant](https://www.vagrantup.com/).
 
+vagrant init antbooker/vagrant-ubuntu-devops-box \
+  --box-version 1.0.0
+vagrant up
+
 ***
 The following software will be installed as of 10/09/2020 05:35:36
 ***
